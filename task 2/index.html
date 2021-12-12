@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bgTurquoise {
+        background-color: turquoise;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myText">Hello World!</p>
+
+    <input id="myInput" />
+
+    <div id="myDiv">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, sit!
+      </p>
+    </div>
+
+    <script>
+      // Task 2.1, 2.3
+      const p = document.getElementById("myText");
+
+      p.style.fontSize = "50px";
+      p.classList.add("text");
+      p.setAttribute("title", "myTitle");
+
+      // Task 2.2
+      const input = document.getElementById("myInput");
+
+      input.addEventListener("keyup", (e) => {
+        console.log("Input value: ", e.target.value);
+      });
+
+      // Task 2.4 a, 2.4 b
+      const div = document.getElementById("myDiv");
+
+      div.style.backgroundColor = "turquoise";
+      div.classList.toggle("bgTurquoise");
+    </script>
+  </body>
+</html>
